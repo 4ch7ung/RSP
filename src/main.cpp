@@ -17,17 +17,19 @@ int fatalError(const std::string& message, const std::exception& exception) {
 int main(int argc, const char ** argv)
 {
     LogAssembly assembly = LogAssembly();
-    LogModule* module = assembly.createModule();
+    LogModule* module;
     if (argc >= 2) {
         std::string xStr(argv[1]);
         double x;
         try {
             x = std::stod(xStr);
+            module = assembly.createModule(&x);
         } catch (std::exception& exception) {
             delete module;
             return fatalError("Error parsing argument", exception);
         }
-        module->setX(x);
+    } else {
+        module = assembly.createModule();
     }
 
     try {

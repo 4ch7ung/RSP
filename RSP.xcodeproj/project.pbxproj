@@ -6,11 +6,50 @@
 	objectVersion = 50;
 	objects = {
 
+/* Begin PBXFileReference section */
+		FA2A367B209E27830048C33F /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		FA2A367D209E27900048C33F /* math_functions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = math_functions.h; sourceTree = "<group>"; };
+		FA2A367E209E27900048C33F /* logarithm.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = logarithm.cpp; sourceTree = "<group>"; };
+		FA2A367F209E27900048C33F /* CursesUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CursesUI.h; sourceTree = "<group>"; };
+		FA2A3680209E27900048C33F /* LogModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogModule.h; sourceTree = "<group>"; };
+		FA2A3681209E27900048C33F /* Module.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Module.cpp; sourceTree = "<group>"; };
+		FA2A3682209E27900048C33F /* LogUI.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LogUI.cpp; sourceTree = "<group>"; };
+		FA2A3683209E27900048C33F /* LogAssembly.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LogAssembly.cpp; sourceTree = "<group>"; };
+		FA2A3684209E27900048C33F /* CursesUI.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CursesUI.cpp; sourceTree = "<group>"; };
+		FA2A3685209E27900048C33F /* LogUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogUI.h; sourceTree = "<group>"; };
+		FA2A3686209E27900048C33F /* LogAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogAssembly.h; sourceTree = "<group>"; };
+		FA2A3687209E27900048C33F /* Module.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Module.h; sourceTree = "<group>"; };
+		FA2A3688209E27900048C33F /* LogModule.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LogModule.cpp; sourceTree = "<group>"; };
+		FA2A3689209E27900048C33F /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
 /* Begin PBXGroup section */
 		FA2A3670209E27560048C33F = {
 			isa = PBXGroup;
 			children = (
+				FA2A367C209E27900048C33F /* src */,
+				FA2A367B209E27830048C33F /* Makefile */,
 			);
+			sourceTree = "<group>";
+		};
+		FA2A367C209E27900048C33F /* src */ = {
+			isa = PBXGroup;
+			children = (
+				FA2A367D209E27900048C33F /* math_functions.h */,
+				FA2A367E209E27900048C33F /* logarithm.cpp */,
+				FA2A3687209E27900048C33F /* Module.h */,
+				FA2A3681209E27900048C33F /* Module.cpp */,
+				FA2A367F209E27900048C33F /* CursesUI.h */,
+				FA2A3684209E27900048C33F /* CursesUI.cpp */,
+				FA2A3685209E27900048C33F /* LogUI.h */,
+				FA2A3682209E27900048C33F /* LogUI.cpp */,
+				FA2A3680209E27900048C33F /* LogModule.h */,
+				FA2A3688209E27900048C33F /* LogModule.cpp */,
+				FA2A3686209E27900048C33F /* LogAssembly.h */,
+				FA2A3683209E27900048C33F /* LogAssembly.cpp */,
+				FA2A3689209E27900048C33F /* main.cpp */,
+			);
+			path = src;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

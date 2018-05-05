@@ -10,10 +10,10 @@ private:
     LogUI * m_ui;
 public:
     LogModule(LogUI * ui);
+    LogModule(LogUI * ui, double x);
     ~LogModule();
 
     void run();
-    void setX(double x);
 };
 
 #endif

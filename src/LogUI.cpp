@@ -7,7 +7,7 @@ LogUI::LogUI(CursesUI * curses) {
 }
 
 LogUI::~LogUI() {
-    if (this->m_curses != NULL) {
+    if (this->m_curses != nullptr) {
         delete this->m_curses;
     }
 }

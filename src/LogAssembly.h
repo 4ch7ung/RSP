@@ -5,7 +5,7 @@
 
 class LogAssembly {
 public:
-    LogModule* createModule();
+    LogModule* createModule(const double * x = nullptr);
 };
 
 #endif

@@ -1,5 +1,5 @@
 CC = g++
-CFLAGS = -g -c -Wall
+CFLAGS = -g -c -Wall -std=c++14
 LDFLAGS = -lncurses
 BUILD_DIR = build
 SRC_DIR = src
