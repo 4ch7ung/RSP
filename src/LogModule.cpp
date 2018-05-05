@@ -1,38 +1,41 @@
 #include <stdexcept>
 #include <ncurses.h>
-#include "Module.hpp"
+#include "LogModule.h"
 #include "math_functions.h"
 
-LogModule::LogModule() {
+LogModule::LogModule(LogUI * ui) {
+    this->m_ui = ui;
     this->x = NULL;
 }
 
-LogModule::LogModule(double x) {
+LogModule::~LogModule() {
+    if (this->m_ui != NULL) {
+        delete this->m_ui;
+    }
+    if (this->x != NULL) {
+        delete this->x;
+    }
+}
+
+void LogModule::setX(double x) {
+    if (this->x != NULL) {
+        delete this->x;
+    }
     this->x = new double(x);
 }
 
-LogModule::~LogModule() {
-    delete this->x;
-}
-
 void LogModule::run() {
-    initscr();
+    m_ui->showGreeting();
     if (this->x == NULL) {
         this->x = new double;
-        printw("Input x: ");
-        scanw("%lf", this->x);
+        *(this->x) = m_ui->inputX();
     }
     double lnx;
     try {
-        lnx = ln(*(this->x));
+        lnx = ln(*x);
     } catch (std::exception& exception) {
-        endwin();
         throw;
     }
-
-    printw("Ln(%lf) = %.8lf\n", *(this->x), lnx);
-    printw("Press any key to close...");
-    refresh();
-    getch();
-    endwin();
+    m_ui->showLogX(*x, lnx);
+    m_ui->wait();
 }
