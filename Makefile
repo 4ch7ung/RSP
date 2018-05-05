@@ -1,6 +1,6 @@
 CC = g++
 CFLAGS = -g -c -Wall
-LDFLAGS =
+LDFLAGS = -lncurses
 BUILD_DIR = build
 BIN_DIR = $(BUILD_DIR)/bin
 OBJ_DIR = $(BUILD_DIR)/obj
